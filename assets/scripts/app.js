@@ -9,14 +9,14 @@ function getUserNumberInput() {
 
 // Generates and writes calculation log
 function createAndWriteOutput(operator, resultBeforeCalc, calcNumber) {
-  const calcDescription = `${resultBeforeCalc} ${operator} ${calcNumber}`
+  const calcDescription = `${resultBeforeCalc} ${operator} ${calcNumber}`;
   outputResult(currentResult, calcDescription); // From vendor.js
 }
 
 function writeToLog(
-  operationIdentifier, 
-  prevResult, 
-  operationNumber, 
+  operationIdentifier,
+  prevResult,
+  operationNumber,
   newResult
 ) {
   const logEntry = {
@@ -43,7 +43,6 @@ function subtract() {
   currentResult -= enteredNumber;
   createAndWriteOutput('-', initialResult, enteredNumber);
   writeToLog('SUBTRACT', initialResult, enteredNumber, currentResult);
-
 }
 
 function multiply() {
